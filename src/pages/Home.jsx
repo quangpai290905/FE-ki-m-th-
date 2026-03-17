@@ -45,7 +45,7 @@ export default function Home() {
         // 1. Gọi API lấy mapping lớp học để biết classId điều hướng
         ClassApi.getMyEnrollments()
           .then((data) => {
-              if (Array.isArray(data)) {
+             if (Array.isArray(data.courses)) {
                   const mapping = {};
                   data.forEach(enrol => {
                       const cId = enrol.courseId || enrol.course?.id || enrol.course_id;
