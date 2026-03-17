@@ -304,7 +304,7 @@ export default function UserManagerTable({ role, title }) {
         onOk={handleSave}
         onCancel={() => setIsModalOpen(false)}
         width={600}
-        destroyOnClose // Reset form khi đóng modal
+        destroyOnHidden // Đã sửa thuộc tính này
       >
         <Form form={form} layout="vertical" style={{ marginTop: 20 }}>
           <Row gutter={16}>
